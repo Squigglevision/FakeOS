@@ -1,0 +1,8 @@
+body {
+  background-image: url(../images/mac-wallpaper-dark-16-9.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
