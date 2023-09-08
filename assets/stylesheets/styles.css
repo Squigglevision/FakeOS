@@ -20,7 +20,8 @@ body {
   width: 100vw;
   height: 40px;
   background-color: white;
-  opacity: 0.5;
+  background-color: rgba(190, 242, 251, 0.5);
+  backdrop-filter: blur(50px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,12 +86,14 @@ footer {
 
 .dock {
   background-color: white;
+  backdrop-filter: blur(20px);
   width: 510px;
   min-height: 60px;
   max-height: 70px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 50px -15px black;
   margin-bottom: 5px;
   display: flex;
   justify-items: flex-start;
@@ -104,9 +107,9 @@ footer {
 .dock__icon {
   height: 90%;
 }
-.dock--right {
-  margin-left: auto;
+.dock__icon--right {
   border-left: 1px solid black;
+  margin-left: auto;
   padding-left: 20px;
 }
 
