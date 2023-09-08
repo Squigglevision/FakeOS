@@ -1,11 +1,1 @@
-body {
-	background-image: url(../images/mac-wallpaper-dark-16-9.png);
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-color: #464646;
-}
-
-// Most common 4:3  - 1024 x 768
-// Most common 16:9  - 1920 x 1080
+@use "./modules/desktop.scss";
