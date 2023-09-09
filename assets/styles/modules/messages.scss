@@ -1,24 +1,32 @@
-.finder {
-	position: fixed;
+.messages {
+	position: absolute;
 	height: 60vh;
 	width: 90vh;
-	margin-left: 0;
-	margin-top: 0;
-	border: 1px solid rgb(0, 0, 0, 0.1);
+	margin-left: 0px;
+	margin-top: -0px;
 	border-radius: 10px;
 	display: none;
 	color: black;
 	text-shadow: none;
 
 	&__left {
-		max-width: 20%;
+		max-width: 30%;
 		background-color: #e6e0dd;
 		border-top-left-radius: 10px;
 		border-bottom-left-radius: 10px;
 		display: flex;
 		flex-direction: column;
-		box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2),
-			-1px 10px 30px 0px rgba(0, 0, 0, 0.2);
+		box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1),
+			-1px 10px 30px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	&__right {
+		min-width: 75%;
+		background-color: white;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.1),
+			10px 10px 30px 0px rgba(0, 0, 0, 0.1);
 	}
 
 	&__window__buttons {
@@ -67,15 +75,6 @@
 
 	&__category {
 		opacity: 0.4;
-	}
-
-	&__right {
-		min-width: 85%;
-		background-color: white;
-		border-top-right-radius: 10px;
-		border-bottom-right-radius: 10px;
-		box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.2),
-			10px 10px 30px 0px rgba(0, 0, 0, 0.2);
 	}
 
 	&__header {

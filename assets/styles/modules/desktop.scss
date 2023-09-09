@@ -68,7 +68,7 @@ main {
 	text-shadow: 1px 1px 10px black;
 	display: flex;
 	justify-content: center;
-	z-index: -1;
+	z-index: 0;
 	&__icon {
 		display: flex;
 		flex-direction: column;
@@ -103,7 +103,7 @@ footer {
 	justify-content: center;
 }
 .dock {
-	z-index: -1;
+	z-index: 0;
 	background-color: white;
 	backdrop-filter: blur(20px);
 	width: 510px;

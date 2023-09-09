@@ -63,7 +63,7 @@ main {
   text-shadow: 1px 1px 10px black;
   display: flex;
   justify-content: center;
-  z-index: -1;
+  z-index: 0;
 }
 .desktop__icon {
   display: flex;
@@ -99,7 +99,7 @@ footer {
 }
 
 .dock {
-  z-index: -1;
+  z-index: 0;
   background-color: white;
   backdrop-filter: blur(20px);
   width: 510px;
