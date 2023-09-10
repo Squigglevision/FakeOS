@@ -8,6 +8,7 @@
 			src="https://kit.fontawesome.com/d1ea9d8bdb.js"
 			crossorigin="anonymous"
 		></script>
+		<script src="./assets/javascript/dom.js" defer></script>
 		<title>FaMac OS</title>
 	</head>
 	<body>
@@ -34,75 +35,242 @@
 							alt=""
 						/>
 					</li>
-					<li>Thu 7 Sep 6:28 pm</li>
+					<li id="dateAndTime">Thu 7 Sep 6:28 pm</li>
 				</ul>
 			</nav>
 		</header>
-		<main class="desktop">
-			<div class="desktop__icon__wrapper">
-				<div class="desktop__icon">
-					<img
-						class="desktop__icon__hd"
-						src="assets/images/mac-hd.png"
-						alt=""
-					/>
-					<p>Macintosh HD</p>
+		<main>
+			<div id="calculator" class="calculator">
+				<div class="calculator__left">
+					<div class="calculator__window__buttons">
+						<div
+							id="calculatorClose"
+							class="calculator__close"
+						></div>
+						<div class="calculator__minimise"></div>
+						<div class="calculator__fullscreen"></div>
+					</div>
+					<div class="calculator__shortcuts">
+						<ul>
+							<li class="calculator__category">Favourites</li>
+							<li class="calculator__path">Recent</li>
+							<li class="calculator__path">Applications</li>
+							<li class="calculator__path">Desktop</li>
+							<li class="calculator__path">Cat pics</li>
+							<li class="calculator__path">Documents</li>
+							<li class="calculator__path">Cool stuff</li>
+						</ul>
+					</div>
 				</div>
-				<div class="desktop__icon">
-					<img
-						class="desktop__icon__folder"
-						src="./assets/images/folder-icon-macos.webp"
-						alt=""
-					/>
-					<p>Cat pics</p>
-				</div>
-				<div class="desktop__icon">
-					<img
-						class="desktop__icon__folder"
-						src="./assets/images/folder-icon-macos.webp"
-						alt=""
-					/>
-					<p>Documents</p>
-				</div>
-				<div class="desktop__icon">
-					<img
-						class="desktop__icon__folder"
-						src="./assets/images/folder-icon-macos.webp"
-						alt=""
-					/>
-					<p>Cool stuff</p>
+				<div class="calculator__right">
+					<div id="calculatorHeader" class="calculator__header">
+						<p id="calculatorHeaderText">calculator</p>
+					</div>
+					<div class="calculator__content">
+						<div class="calculator__content__wrapper">
+							<img src="./assets/images/cat1.jpg" alt="" />
+						</div>
+						<div class="calculator__content__wrapper">
+							<img src="./assets/images/cat2.jpg" alt="" />
+						</div>
+						<div class="calculator__content__wrapper">
+							<img src="./assets/images/cat3.jpg" alt="" />
+						</div>
+						<div class="calculator__content__wrapper">
+							<img src="./assets/images/cat4.jpg" alt="" />
+						</div>
+					</div>
 				</div>
 			</div>
+			<div id="notes" class="notes">
+				<div class="notes__left">
+					<div class="notes__window__buttons">
+						<div id="notesClose" class="notes__close"></div>
+						<div class="notes__minimise"></div>
+						<div class="notes__fullscreen"></div>
+					</div>
+					<div class="notes__shortcuts">
+						<ul>
+							<li class="notes__category">Favourites</li>
+							<li class="notes__path">Recent</li>
+							<li class="notes__path">Applications</li>
+							<li class="notes__path">Desktop</li>
+							<li class="notes__path">Cat pics</li>
+							<li class="notes__path">Documents</li>
+							<li class="notes__path">Cool stuff</li>
+						</ul>
+					</div>
+				</div>
+				<div class="notes__right">
+					<div id="notesHeader" class="notes__header">
+						<p id="notesHeaderText">notes</p>
+					</div>
+					<div class="notes__content">
+						<div class="notes__content__wrapper">
+							<img src="./assets/images/cat1.jpg" alt="" />
+						</div>
+						<div class="notes__content__wrapper">
+							<img src="./assets/images/cat2.jpg" alt="" />
+						</div>
+						<div class="notes__content__wrapper">
+							<img src="./assets/images/cat3.jpg" alt="" />
+						</div>
+						<div class="notes__content__wrapper">
+							<img src="./assets/images/cat4.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="messages" class="messages">
+				<div class="messages__left">
+					<div class="messages__window__buttons">
+						<div id="messagesClose" class="messages__close"></div>
+						<div class="messages__minimise"></div>
+						<div class="messages__fullscreen"></div>
+					</div>
+					<div class="messages__shortcuts">
+						<ul>
+							<li class="messages__category">Favourites</li>
+							<li class="messages__path">Recent</li>
+							<li class="messages__path">Applications</li>
+							<li class="messages__path">Desktop</li>
+							<li class="messages__path">Cat pics</li>
+							<li class="messages__path">Documents</li>
+							<li class="messages__path">Cool stuff</li>
+						</ul>
+					</div>
+				</div>
+				<div class="messages__right">
+					<div id="messagesHeader" class="messages__header">
+						<p id="messagesHeaderText">Messages</p>
+					</div>
+					<div class="messages__content">
+						<div class="messages__content__wrapper">
+							<img src="./assets/images/cat1.jpg" alt="" />
+						</div>
+						<div class="messages__content__wrapper">
+							<img src="./assets/images/cat2.jpg" alt="" />
+						</div>
+						<div class="messages__content__wrapper">
+							<img src="./assets/images/cat3.jpg" alt="" />
+						</div>
+						<div class="messages__content__wrapper">
+							<img src="./assets/images/cat4.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="finder" id="finder">
+				<div class="finder__left">
+					<div class="finder__window__buttons">
+						<div id="finderClose" class="finder__close"></div>
+						<div class="finder__minimise"></div>
+						<div class="finder__fullscreen"></div>
+					</div>
+					<div class="finder__shortcuts">
+						<ul>
+							<li class="finder__category">Favourites</li>
+							<li class="finder__path">Recent</li>
+							<li class="finder__path">Applications</li>
+							<li class="finder__path">Desktop</li>
+							<li class="finder__path">Cat pics</li>
+							<li class="finder__path">Documents</li>
+							<li class="finder__path">Cool stuff</li>
+						</ul>
+					</div>
+				</div>
+				<div class="finder__right">
+					<div id="finderHeader" class="finder__header">
+						<p id="finderHeaderText">Cat pics</p>
+					</div>
+					<div class="finder__content">
+						<div class="finder__content__wrapper">
+							<img src="./assets/images/cat1.jpg" alt="" />
+						</div>
+						<div class="finder__content__wrapper">
+							<img src="./assets/images/cat2.jpg" alt="" />
+						</div>
+						<div class="finder__content__wrapper">
+							<img src="./assets/images/cat3.jpg" alt="" />
+						</div>
+						<div class="finder__content__wrapper">
+							<img src="./assets/images/cat4.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="desktop">
+				<div class="desktop__icon__wrapper">
+					<div id="hdIcon" class="desktop__icon">
+						<img
+							class="desktop__icon__hd"
+							src="assets/images/mac-hd.png"
+							alt=""
+						/>
+						<p>Macintosh HD</p>
+					</div>
+					<div id="coolStuffIcon" class="desktop__icon">
+						<img
+							class="desktop__icon__folder"
+							src="./assets/images/folder-icon-macos.webp"
+							alt=""
+						/>
+						<p>Cool stuff</p>
+					</div>
+					<div id="documentsIcon" class="desktop__icon">
+						<img
+							class="desktop__icon__folder"
+							src="./assets/images/folder-icon-macos.webp"
+							alt=""
+						/>
+						<p>Documents</p>
+					</div>
+					<div id="catPicsIcon" class="desktop__icon">
+						<img
+							class="desktop__icon__folder"
+							src="./assets/images/folder-icon-macos.webp"
+							alt=""
+						/>
+						<p>Cat pics</p>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer>
 			<section class="dock">
 				<img
+					id="finderDock"
 					class="dock__icon"
 					src="./assets/images/FinderIcon.png"
 					alt=""
 				/>
 				<img
+					id="messagesDock"
 					class="dock__icon"
 					src="./assets/images/messages-mac.png"
 					alt=""
 				/>
 				<img
+					id="notesDock"
 					class="dock__icon"
 					src="./assets/images/notes-mac.png"
 					alt=""
 				/>
 				<img
+					id="calculatorDock"
 					class="dock__icon"
 					src="./assets/images/calculator.png"
 					alt=""
 				/>
 				<div class="dock__divider"></div>
 				<img
+					id="downloadsDock"
 					class="dock__icon dock__icon--right"
 					src="./assets/images/downloadsFolder.png"
 					alt=""
 				/>
 				<img
+					id="binDock"
 					class="dock__icon"
 					src="./assets/images/mac-bin.png"
 					alt=""
