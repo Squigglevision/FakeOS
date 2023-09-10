@@ -1,7 +1,7 @@
-.messages {
+.calculator {
   position: absolute;
-  top: 50px;
-  left: 20px;
+  bottom: 100px;
+  right: 20px;
   height: 50%;
   width: 40%;
   border-radius: 10px;
@@ -9,7 +9,7 @@
   color: black;
   text-shadow: none;
 }
-.messages__left {
+.calculator__left {
   width: 20%;
   background-color: #e6e0dd;
   border-top-left-radius: 10px;
@@ -18,68 +18,68 @@
   flex-direction: column;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1), -1px 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
-.messages__right {
+.calculator__right {
   width: 80%;
   background-color: white;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.1), 10px 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
-.messages__window__buttons {
+.calculator__window__buttons {
   width: 100px;
   height: 20px;
   display: flex;
   padding: 30px 30px 10px 30px;
   gap: 12px;
 }
-.messages__close {
+.calculator__close {
   width: 12px;
   height: 12px;
   background-color: #fb5851;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
 }
-.messages__minimise {
+.calculator__minimise {
   width: 12px;
   height: 12px;
   background-color: #fab23f;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
 }
-.messages__fullscreen {
+.calculator__fullscreen {
   width: 12px;
   height: 12px;
   background-color: #32c048;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
 }
-.messages__shortcuts {
+.calculator__shortcuts {
   padding: 20px;
 }
-.messages__shortcuts > ul {
+.calculator__shortcuts > ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.messages__shortcuts > ul > li {
+.calculator__shortcuts > ul > li {
   list-style-type: none;
 }
-.messages__category {
+.calculator__category {
   opacity: 0.4;
 }
-.messages__header {
+.calculator__header {
   height: 100px;
   background-color: #fcf6f3;
   display: flex;
   align-items: center;
   border-top-right-radius: 10px;
 }
-.messages__header > p {
+.calculator__header > p {
   margin-left: 20px;
   font-size: 20px;
   font-weight: 500;
 }
-.messages__content {
+.calculator__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -91,13 +91,13 @@
   margin-top: 20px;
   margin-left: 20px;
 }
-.messages__content__wrapper {
+.calculator__content__wrapper {
   border: 2px solid white;
   box-shadow: -5px 10px 40px -30px black;
 }
-.messages__content__wrapper > img {
+.calculator__content__wrapper > img {
   width: 100px;
   border: 1px solid black;
 }
 
-/*# sourceMappingURL=messages.css.map */
+/*# sourceMappingURL=calculator.css.map */

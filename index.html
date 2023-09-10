@@ -35,11 +35,92 @@
 							alt=""
 						/>
 					</li>
-					<li>Thu 7 Sep 6:28 pm</li>
+					<li id="dateAndTime">Thu 7 Sep 6:28 pm</li>
 				</ul>
 			</nav>
 		</header>
 		<main>
+			<div id="calculator" class="calculator">
+				<div class="calculator__left">
+					<div class="calculator__window__buttons">
+						<div
+							id="calculatorClose"
+							class="calculator__close"
+						></div>
+						<div class="calculator__minimise"></div>
+						<div class="calculator__fullscreen"></div>
+					</div>
+					<div class="calculator__shortcuts">
+						<ul>
+							<li class="calculator__category">Favourites</li>
+							<li class="calculator__path">Recent</li>
+							<li class="calculator__path">Applications</li>
+							<li class="calculator__path">Desktop</li>
+							<li class="calculator__path">Cat pics</li>
+							<li class="calculator__path">Documents</li>
+							<li class="calculator__path">Cool stuff</li>
+						</ul>
+					</div>
+				</div>
+				<div class="calculator__right">
+					<div id="calculatorHeader" class="calculator__header">
+						<p id="calculatorHeaderText">calculator</p>
+					</div>
+					<div class="calculator__content">
+						<div class="calculator__content__wrapper">
+							<img src="./assets/images/cat1.jpg" alt="" />
+						</div>
+						<div class="calculator__content__wrapper">
+							<img src="./assets/images/cat2.jpg" alt="" />
+						</div>
+						<div class="calculator__content__wrapper">
+							<img src="./assets/images/cat3.jpg" alt="" />
+						</div>
+						<div class="calculator__content__wrapper">
+							<img src="./assets/images/cat4.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="notes" class="notes">
+				<div class="notes__left">
+					<div class="notes__window__buttons">
+						<div id="notesClose" class="notes__close"></div>
+						<div class="notes__minimise"></div>
+						<div class="notes__fullscreen"></div>
+					</div>
+					<div class="notes__shortcuts">
+						<ul>
+							<li class="notes__category">Favourites</li>
+							<li class="notes__path">Recent</li>
+							<li class="notes__path">Applications</li>
+							<li class="notes__path">Desktop</li>
+							<li class="notes__path">Cat pics</li>
+							<li class="notes__path">Documents</li>
+							<li class="notes__path">Cool stuff</li>
+						</ul>
+					</div>
+				</div>
+				<div class="notes__right">
+					<div id="notesHeader" class="notes__header">
+						<p id="notesHeaderText">notes</p>
+					</div>
+					<div class="notes__content">
+						<div class="notes__content__wrapper">
+							<img src="./assets/images/cat1.jpg" alt="" />
+						</div>
+						<div class="notes__content__wrapper">
+							<img src="./assets/images/cat2.jpg" alt="" />
+						</div>
+						<div class="notes__content__wrapper">
+							<img src="./assets/images/cat3.jpg" alt="" />
+						</div>
+						<div class="notes__content__wrapper">
+							<img src="./assets/images/cat4.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
 			<div id="messages" class="messages">
 				<div class="messages__left">
 					<div class="messages__window__buttons">
@@ -170,22 +251,26 @@
 					alt=""
 				/>
 				<img
+					id="notesDock"
 					class="dock__icon"
 					src="./assets/images/notes-mac.png"
 					alt=""
 				/>
 				<img
+					id="calculatorDock"
 					class="dock__icon"
 					src="./assets/images/calculator.png"
 					alt=""
 				/>
 				<div class="dock__divider"></div>
 				<img
+					id="downloadsDock"
 					class="dock__icon dock__icon--right"
 					src="./assets/images/downloadsFolder.png"
 					alt=""
 				/>
 				<img
+					id="binDock"
 					class="dock__icon"
 					src="./assets/images/mac-bin.png"
 					alt=""

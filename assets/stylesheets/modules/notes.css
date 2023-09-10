@@ -1,7 +1,7 @@
-.messages {
+.notes {
   position: absolute;
   top: 50px;
-  left: 20px;
+  right: 20px;
   height: 50%;
   width: 40%;
   border-radius: 10px;
@@ -9,7 +9,7 @@
   color: black;
   text-shadow: none;
 }
-.messages__left {
+.notes__left {
   width: 20%;
   background-color: #e6e0dd;
   border-top-left-radius: 10px;
@@ -18,68 +18,68 @@
   flex-direction: column;
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1), -1px 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
-.messages__right {
+.notes__right {
   width: 80%;
   background-color: white;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.1), 10px 10px 30px 0px rgba(0, 0, 0, 0.1);
 }
-.messages__window__buttons {
+.notes__window__buttons {
   width: 100px;
   height: 20px;
   display: flex;
   padding: 30px 30px 10px 30px;
   gap: 12px;
 }
-.messages__close {
+.notes__close {
   width: 12px;
   height: 12px;
   background-color: #fb5851;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
 }
-.messages__minimise {
+.notes__minimise {
   width: 12px;
   height: 12px;
   background-color: #fab23f;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
 }
-.messages__fullscreen {
+.notes__fullscreen {
   width: 12px;
   height: 12px;
   background-color: #32c048;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
 }
-.messages__shortcuts {
+.notes__shortcuts {
   padding: 20px;
 }
-.messages__shortcuts > ul {
+.notes__shortcuts > ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.messages__shortcuts > ul > li {
+.notes__shortcuts > ul > li {
   list-style-type: none;
 }
-.messages__category {
+.notes__category {
   opacity: 0.4;
 }
-.messages__header {
+.notes__header {
   height: 100px;
   background-color: #fcf6f3;
   display: flex;
   align-items: center;
   border-top-right-radius: 10px;
 }
-.messages__header > p {
+.notes__header > p {
   margin-left: 20px;
   font-size: 20px;
   font-weight: 500;
 }
-.messages__content {
+.notes__content {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -91,13 +91,13 @@
   margin-top: 20px;
   margin-left: 20px;
 }
-.messages__content__wrapper {
+.notes__content__wrapper {
   border: 2px solid white;
   box-shadow: -5px 10px 40px -30px black;
 }
-.messages__content__wrapper > img {
+.notes__content__wrapper > img {
   width: 100px;
   border: 1px solid black;
 }
 
-/*# sourceMappingURL=messages.css.map */
+/*# sourceMappingURL=notes.css.map */
