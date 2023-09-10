@@ -16,36 +16,6 @@ body {
   flex-direction: column;
 }
 
-.menu {
-  width: 100vw;
-  height: 40px;
-  background-color: white;
-  background-color: rgba(190, 242, 251, 0.7);
-  backdrop-filter: blur(50px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.menu__left {
-  margin-left: 20px;
-  display: flex;
-  list-style-type: none;
-  gap: 20px;
-}
-.menu__right {
-  margin-right: 20px;
-  display: flex;
-  list-style-type: none;
-  gap: 20px;
-}
-.menu__right > li > img {
-  height: 20px;
-  width: 20px;
-}
-.menu__item--bold {
-  font-weight: bold;
-}
-
 main {
   display: flex;
   justify-content: center;

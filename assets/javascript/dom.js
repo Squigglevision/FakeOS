@@ -19,6 +19,33 @@ const closeCalculator = document.querySelector("#calculatorClose");
 const openDownloads = document.querySelector("#downloadsDock");
 const openBin = document.querySelector("#binDock");
 
+// ---> menu functions - to their own javascript file?
+const leftMenu = document.querySelector("#leftMenu");
+const menuToHover = leftMenu.querySelectorAll("li");
+const hovered = leftMenu.querySelectorAll("li.menu__hover");
+
+console.log(menuToHover);
+
+menuToHover.forEach((li) => {
+	li.addEventListener("mouseover", (event) => {
+		li.classList.add("menu__hover");
+	});
+});
+
+menuToHover.forEach((li) => {
+	li.addEventListener("mouseleave", (event) => {
+		li.classList.remove("menu__hover");
+	});
+});
+
+const menuApple = document.querySelector("#menuApple");
+const appleDropdown = document.querySelector("#appleDropdown");
+menuApple.addEventListener("click", (event) => {
+	appleDropdown.classList.toggle("dropdown__apple--hidden");
+});
+
+// <---
+
 // ---> Date and time -- to its own javascript file?
 const dateAndTime = document.querySelector("#dateAndTime");
 const date = new Date().toUTCString().slice(0, 11);
