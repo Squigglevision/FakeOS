@@ -16,7 +16,10 @@
 			<nav class="menu" id="menu">
 				<ul id="leftMenu" class="menu__left">
 					<li id="menuApple">
-						<i class="fa-brands fa-apple menu__icon"></i>
+						<i
+							id="menuIconApple"
+							class="fa-brands fa-apple menu__icon"
+						></i>
 					</li>
 					<li id="menuAppTitle" class="menu__item--bold">Finder</li>
 					<li id="menuFile">File</li>
@@ -235,8 +238,8 @@
 			</div>
 		</header>
 		<main>
-			<div id="calculator" class="calculator">
-				<div class="calculator__left">
+			<div id="calculator" class="calculator calculator--hidden">
+				<div class="calculator__wrapper">
 					<div class="calculator__window__buttons">
 						<div
 							id="calculatorClose"
@@ -245,39 +248,43 @@
 						<div class="calculator__minimise"></div>
 						<div class="calculator__fullscreen"></div>
 					</div>
-					<div class="calculator__shortcuts">
-						<ul>
-							<li class="calculator__category">Favourites</li>
-							<li class="calculator__path">Recent</li>
-							<li class="calculator__path">Applications</li>
-							<li class="calculator__path">Desktop</li>
-							<li class="calculator__path">Cat pics</li>
-							<li class="calculator__path">Documents</li>
-							<li class="calculator__path">Cool stuff</li>
-						</ul>
-					</div>
-				</div>
-				<div class="calculator__right">
-					<div id="calculatorHeader" class="calculator__header">
-						<p id="calculatorHeaderText">calculator</p>
-					</div>
 					<div class="calculator__content">
-						<div class="calculator__content__wrapper">
-							<img src="./assets/images/cat1.jpg" alt="" />
+						<div class="calculator__screen">
+							<div>0</div>
 						</div>
-						<div class="calculator__content__wrapper">
-							<img src="./assets/images/cat2.jpg" alt="" />
-						</div>
-						<div class="calculator__content__wrapper">
-							<img src="./assets/images/cat3.jpg" alt="" />
-						</div>
-						<div class="calculator__content__wrapper">
-							<img src="./assets/images/cat4.jpg" alt="" />
+						<div class="calculator__buttons">
+							<div class="calculator__buttons__left">
+								<div class="calculator__buttons__left--top">
+									<div class="calculator__btn">AC</div>
+									<div class="calculator__btn">+/-</div>
+									<div class="calculator__btn">%</div>
+								</div>
+								<div class="calculator__buttons__left--bottom">
+									<div class="calculator__btn">9</div>
+									<div class="calculator__btn">8</div>
+									<div class="calculator__btn">7</div>
+									<div class="calculator__btn">6</div>
+									<div class="calculator__btn">5</div>
+									<div class="calculator__btn">4</div>
+									<div class="calculator__btn">3</div>
+									<div class="calculator__btn">2</div>
+									<div class="calculator__btn">1</div>
+									<div class="calculator__btn">0</div>
+									<div class="calculator__btn">.</div>
+								</div>
+							</div>
+							<div class="calculator__buttons__right">
+								<div class="calculator__btn">/</div>
+								<div class="calculator__btn">X</div>
+								<div class="calculator__btn">-</div>
+								<div class="calculator__btn">+</div>
+								<div class="calculator__btn">=</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div id="notes" class="notes">
+			<div id="notes" class="notes notes--hidden">
 				<div class="notes__left">
 					<div class="notes__window__buttons">
 						<div id="notesClose" class="notes__close"></div>
@@ -286,37 +293,23 @@
 					</div>
 					<div class="notes__shortcuts">
 						<ul>
-							<li class="notes__category">Favourites</li>
-							<li class="notes__path">Recent</li>
-							<li class="notes__path">Applications</li>
-							<li class="notes__path">Desktop</li>
-							<li class="notes__path">Cat pics</li>
-							<li class="notes__path">Documents</li>
-							<li class="notes__path">Cool stuff</li>
+							<li class="notes__category">iCloud</li>
+							<li class="notes__path notes__path--gold">Notes</li>
+							<li class="notes__path">Recently Deleted</li>
 						</ul>
 					</div>
 				</div>
 				<div class="notes__right">
 					<div id="notesHeader" class="notes__header">
-						<p id="notesHeaderText">notes</p>
+						<p id="notesHeaderText">Notes</p>
 					</div>
 					<div class="notes__content">
-						<div class="notes__content__wrapper">
-							<img src="./assets/images/cat1.jpg" alt="" />
-						</div>
-						<div class="notes__content__wrapper">
-							<img src="./assets/images/cat2.jpg" alt="" />
-						</div>
-						<div class="notes__content__wrapper">
-							<img src="./assets/images/cat3.jpg" alt="" />
-						</div>
-						<div class="notes__content__wrapper">
-							<img src="./assets/images/cat4.jpg" alt="" />
-						</div>
+						<div class="notes__content__left"><p>No notes</p></div>
+						<div class="notes__content__right"></div>
 					</div>
 				</div>
 			</div>
-			<div id="messages" class="messages">
+			<div id="messages" class="messages messages--hidden">
 				<div class="messages__left">
 					<div class="messages__window__buttons">
 						<div id="messagesClose" class="messages__close"></div>
@@ -324,35 +317,20 @@
 						<div class="messages__fullscreen"></div>
 					</div>
 					<div class="messages__shortcuts">
-						<ul>
-							<li class="messages__category">Favourites</li>
-							<li class="messages__path">Recent</li>
-							<li class="messages__path">Applications</li>
-							<li class="messages__path">Desktop</li>
-							<li class="messages__path">Cat pics</li>
-							<li class="messages__path">Documents</li>
-							<li class="messages__path">Cool stuff</li>
-						</ul>
+						<input
+							type="text"
+							id="searchMessages"
+							class="messages__search"
+							placeholder="Search"
+						/>
+						<div class="messages__new">New Message</div>
 					</div>
 				</div>
 				<div class="messages__right">
 					<div id="messagesHeader" class="messages__header">
-						<p id="messagesHeaderText">Messages</p>
+						<p id="messagesHeaderText">To:</p>
 					</div>
-					<div class="messages__content">
-						<div class="messages__content__wrapper">
-							<img src="./assets/images/cat1.jpg" alt="" />
-						</div>
-						<div class="messages__content__wrapper">
-							<img src="./assets/images/cat2.jpg" alt="" />
-						</div>
-						<div class="messages__content__wrapper">
-							<img src="./assets/images/cat3.jpg" alt="" />
-						</div>
-						<div class="messages__content__wrapper">
-							<img src="./assets/images/cat4.jpg" alt="" />
-						</div>
-					</div>
+					<div class="messages__content"></div>
 				</div>
 			</div>
 			<div class="finder" id="finder">
@@ -376,20 +354,28 @@
 				</div>
 				<div class="finder__right">
 					<div id="finderHeader" class="finder__header">
-						<p id="finderHeaderText">Cat pics</p>
+						<p id="finderHeaderText">Finder</p>
 					</div>
-					<div class="finder__content">
+					<div id="finderContent" class="finder__content">
 						<div class="finder__content__wrapper">
-							<img src="./assets/images/cat1.jpg" alt="" />
+							<div class="finder__content__bin1 bin"></div>
+							<div class="finder__content__cool1 cool"></div>
+							<div class="finder__content__cat1 cats"></div>
+							<div class="finder__content__documents documents">
+								<ul>
+									<li>some-text.docx</li>
+									<li>notes.docx</li>
+								</ul>
+							</div>
 						</div>
 						<div class="finder__content__wrapper">
-							<img src="./assets/images/cat2.jpg" alt="" />
+							<div class="finder__content__cat2 cats"></div>
 						</div>
 						<div class="finder__content__wrapper">
-							<img src="./assets/images/cat3.jpg" alt="" />
+							<div class="finder__content__cat3 cats"></div>
 						</div>
 						<div class="finder__content__wrapper">
-							<img src="./assets/images/cat4.jpg" alt="" />
+							<div class="finder__content__cat4 cats"></div>
 						</div>
 					</div>
 				</div>

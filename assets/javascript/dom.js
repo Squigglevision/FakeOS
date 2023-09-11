@@ -165,17 +165,14 @@ helpHovered.forEach((li) => {
 const menuIconApple = document.querySelector("#menuAppleIcon");
 const menuApple = document.querySelector("#menuApple");
 const appleDropdown = document.querySelector("#appleDropdown");
+
 menuApple.addEventListener("click", (event) => {
 	appleDropdown.classList.toggle("dropdown__apple--hidden");
 });
 
 menuApple.addEventListener("mouseover", (event) => {
-	appleDropdown.classList.toggle("dropdown__apple--hidden");
+	appleDropdown.classList.remove("dropdown__apple--hidden");
 });
-
-// menuIconApple.addEventListener("mouseover", (event) => {
-// 	appleDropdown.classList.toggle("dropdown__apple--hidden");
-// });
 
 const menuAppTitle = document.querySelector("#menuAppTitle");
 const appDropdown = document.querySelector("#appDropdown");
@@ -183,7 +180,7 @@ menuAppTitle.addEventListener("click", (event) => {
 	appDropdown.classList.toggle("dropdown__app--hidden");
 });
 menuAppTitle.addEventListener("mouseover", (event) => {
-	appDropdown.classList.toggle("dropdown__app--hidden");
+	appDropdown.classList.remove("dropdown__app--hidden");
 });
 
 const menuEdit = document.querySelector("#menuEdit");
@@ -193,7 +190,7 @@ menuEdit.addEventListener("click", (event) => {
 });
 
 menuEdit.addEventListener("mouseover", (event) => {
-	editDropdown.classList.toggle("dropdown__edit--hidden");
+	editDropdown.classList.remove("dropdown__edit--hidden");
 });
 
 const menuView = document.querySelector("#menuView");
@@ -202,7 +199,7 @@ menuView.addEventListener("click", (event) => {
 	viewDropdown.classList.toggle("dropdown__view--hidden");
 });
 menuView.addEventListener("mouseover", (event) => {
-	viewDropdown.classList.toggle("dropdown__view--hidden");
+	viewDropdown.classList.remove("dropdown__view--hidden");
 });
 
 const menuGo = document.querySelector("#menuGo");
@@ -212,7 +209,7 @@ menuGo.addEventListener("click", (event) => {
 });
 
 menuGo.addEventListener("mouseover", (event) => {
-	goDropdown.classList.toggle("dropdown__go--hidden");
+	goDropdown.classList.remove("dropdown__go--hidden");
 });
 
 const menuWindow = document.querySelector("#menuWindow");
@@ -222,7 +219,7 @@ menuWindow.addEventListener("click", (event) => {
 });
 
 menuWindow.addEventListener("mouseover", (event) => {
-	windowDropdown.classList.toggle("dropdown__window--hidden");
+	windowDropdown.classList.remove("dropdown__window--hidden");
 });
 
 const menuHelp = document.querySelector("#menuHelp");
@@ -232,7 +229,7 @@ menuHelp.addEventListener("click", (event) => {
 });
 
 menuHelp.addEventListener("mouseover", (event) => {
-	helpDropdown.classList.toggle("dropdown__help--hidden");
+	helpDropdown.classList.remove("dropdown__help--hidden");
 });
 
 const menuFile = document.querySelector("#menuFile");
@@ -242,7 +239,7 @@ menuFile.addEventListener("click", (event) => {
 });
 
 menuFile.addEventListener("mouseover", (event) => {
-	fileDropdown.classList.toggle("dropdown__file--hidden");
+	fileDropdown.classList.remove("dropdown__file--hidden");
 });
 
 window.addEventListener("click", (event) => {
@@ -350,12 +347,9 @@ window.addEventListener("mouseover", (event) => {
 		helpDropdown.classList.add("dropdown__help--hidden");
 	}
 	if (
-		(!menuApple.contains(event.target) &&
-			!appleDropdown.contains(event.target) &&
-			menu.contains(event.target)) ||
-		(!menuIconApple.contains(event.target) &&
-			!appleDropdown.contains(event.target) &&
-			menu.contains(event.target))
+		!menuApple.contains(event.target) &&
+		!appleDropdown.contains(event.target) &&
+		menu.contains(event.target)
 	) {
 		appleDropdown.classList.add("dropdown__apple--hidden");
 	}
@@ -395,12 +389,12 @@ openFinder.addEventListener("click", (event) => {
 });
 
 closeCalculator.addEventListener("click", (event) => {
-	calculator.style.display = "none";
+	calculator.classList.add("calculator--hidden");
 	calculator.style.zIndex = "0";
 });
 
 openCalculator.addEventListener("click", (event) => {
-	calculator.style.display = "flex";
+	calculator.classList.remove("calculator--hidden");
 	messages.style.zIndex = 1;
 	notes.style.zIndex = 1;
 	finder.style.zIndex = 1;
@@ -408,33 +402,51 @@ openCalculator.addEventListener("click", (event) => {
 });
 
 openNotes.addEventListener("click", (event) => {
-	notes.style.display = "flex";
+	notes.classList.remove("notes--hidden");
 	messages.style.zIndex = 1;
 	finder.style.zIndex = 1;
 	notes.style.zIndex = 2;
 	calculator.style.zIndex = 1;
 });
 closeNotes.addEventListener("click", (event) => {
-	notes.style.display = "none";
+	notes.classList.add("notes--hidden");
 	notes.style.zIndex = "0";
 });
 
 closeMessages.addEventListener("click", (event) => {
-	messages.style.display = "none";
+	messages.classList.add("messages--hidden");
 	messages.style.zIndex = "0";
 });
 
 messagesDock.addEventListener("click", (event) => {
-	messages.style.display = "flex";
+	messages.classList.remove("messages--hidden");
 	finder.style.zIndex = 1;
 	notes.style.zIndex = 1;
 	calculator.style.zIndex = 1;
 	messages.style.zIndex = 2;
 });
 
+const finderContent = document.querySelector("#finderContent");
+const cats = finderContent.querySelectorAll("div.cats");
+const cool = finderContent.querySelectorAll("div.cool");
+const documents = finderContent.querySelectorAll("div.documents");
+const bin = finderContent.querySelectorAll("div.bin");
+
 catPicsIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Cat pics";
+	cats.forEach((div) => {
+		div.classList.remove("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 	finder.style.zIndex = 2;
 });
 
@@ -442,28 +454,88 @@ hdIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Macintosh HD";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 });
 
 coolStuffIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Cool stuff";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.remove("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 });
 
 documentsIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Documents";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.remove("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 });
 
 openDownloads.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Downloads";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 });
 
 openBin.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Bin";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.remove("bin--hidden");
+	});
 });
