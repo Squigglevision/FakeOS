@@ -165,84 +165,81 @@ helpHovered.forEach((li) => {
 const menuIconApple = document.querySelector("#menuAppleIcon");
 const menuApple = document.querySelector("#menuApple");
 const appleDropdown = document.querySelector("#appleDropdown");
+
 menuApple.addEventListener("click", (event) => {
-	appleDropdown.classList.toggle("dropdown__apple--hidden");
+	appleDropdown.classList.remove("dropdown__apple--hidden");
 });
 
 menuApple.addEventListener("mouseover", (event) => {
-	appleDropdown.classList.toggle("dropdown__apple--hidden");
+	appleDropdown.classList.remove("dropdown__apple--hidden");
 });
-
-// menuIconApple.addEventListener("mouseover", (event) => {
-// 	appleDropdown.classList.toggle("dropdown__apple--hidden");
-// });
 
 const menuAppTitle = document.querySelector("#menuAppTitle");
 const appDropdown = document.querySelector("#appDropdown");
 menuAppTitle.addEventListener("click", (event) => {
-	appDropdown.classList.toggle("dropdown__app--hidden");
+	appDropdown.classList.remove("dropdown__app--hidden");
 });
 menuAppTitle.addEventListener("mouseover", (event) => {
-	appDropdown.classList.toggle("dropdown__app--hidden");
+	appDropdown.classList.remove("dropdown__app--hidden");
 });
 
 const menuEdit = document.querySelector("#menuEdit");
 const menuDropdown = document.querySelector("#menuDropdown");
 menuEdit.addEventListener("click", (event) => {
-	editDropdown.classList.toggle("dropdown__edit--hidden");
+	editDropdown.classList.remove("dropdown__edit--hidden");
 });
 
 menuEdit.addEventListener("mouseover", (event) => {
-	editDropdown.classList.toggle("dropdown__edit--hidden");
+	editDropdown.classList.remove("dropdown__edit--hidden");
 });
 
 const menuView = document.querySelector("#menuView");
 const viewDropdown = document.querySelector("#viewDropdown");
 menuView.addEventListener("click", (event) => {
-	viewDropdown.classList.toggle("dropdown__view--hidden");
+	viewDropdown.classList.remove("dropdown__view--hidden");
 });
 menuView.addEventListener("mouseover", (event) => {
-	viewDropdown.classList.toggle("dropdown__view--hidden");
+	viewDropdown.classList.remove("dropdown__view--hidden");
 });
 
 const menuGo = document.querySelector("#menuGo");
 const goDropdown = document.querySelector("#goDropdown");
 menuGo.addEventListener("click", (event) => {
-	goDropdown.classList.toggle("dropdown__go--hidden");
+	goDropdown.classList.remove("dropdown__go--hidden");
 });
 
 menuGo.addEventListener("mouseover", (event) => {
-	goDropdown.classList.toggle("dropdown__go--hidden");
+	goDropdown.classList.remove("dropdown__go--hidden");
 });
 
 const menuWindow = document.querySelector("#menuWindow");
 const windowDropdown = document.querySelector("#windowDropdown");
 menuWindow.addEventListener("click", (event) => {
-	windowDropdown.classList.toggle("dropdown__window--hidden");
+	windowDropdown.classList.remove("dropdown__window--hidden");
 });
 
 menuWindow.addEventListener("mouseover", (event) => {
-	windowDropdown.classList.toggle("dropdown__window--hidden");
+	windowDropdown.classList.remove("dropdown__window--hidden");
 });
 
 const menuHelp = document.querySelector("#menuHelp");
 const helpDropdown = document.querySelector("#helpDropdown");
 menuHelp.addEventListener("click", (event) => {
-	helpDropdown.classList.toggle("dropdown__help--hidden");
+	helpDropdown.classList.remove("dropdown__help--hidden");
 });
 
 menuHelp.addEventListener("mouseover", (event) => {
-	helpDropdown.classList.toggle("dropdown__help--hidden");
+	helpDropdown.classList.remove("dropdown__help--hidden");
 });
 
 const menuFile = document.querySelector("#menuFile");
 const fileDropdown = document.querySelector("#fileDropdown");
 menuFile.addEventListener("click", (event) => {
-	fileDropdown.classList.toggle("dropdown__file--hidden");
+	fileDropdown.classList.remove("dropdown__file--hidden");
 });
 
 menuFile.addEventListener("mouseover", (event) => {
-	fileDropdown.classList.toggle("dropdown__file--hidden");
+	fileDropdown.classList.remove("dropdown__file--hidden");
 });
 
 window.addEventListener("click", (event) => {

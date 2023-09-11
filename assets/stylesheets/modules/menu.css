@@ -1,4 +1,5 @@
 .menu {
+  cursor: default;
   width: 100vw;
   height: 40px;
   background-color: rgba(190, 242, 251, 0.7);
@@ -38,16 +39,17 @@
   color: white;
 }
 .dropdown__apple {
+  cursor: default;
   z-index: 3;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(234, 252, 254, 0.3);
+  background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
   backdrop-filter: blur(30px);
   position: fixed;
   width: 250px;
   border-radius: 5px;
   top: 41px;
-  left: 10px;
+  left: 20px;
   padding: 10px 20px;
 }
 .dropdown__apple--hidden {
@@ -69,16 +71,17 @@
 }
 
 .dropdown__app {
+  cursor: default;
   z-index: 3;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(234, 252, 254, 0.3);
+  background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
   backdrop-filter: blur(30px);
   position: fixed;
   width: 250px;
   border-radius: 5px;
   top: 41px;
-  left: 52px;
+  left: 61px;
   padding: 10px 20px;
 }
 .dropdown__app--hidden {
@@ -100,16 +103,17 @@
 }
 
 .dropdown__file {
+  cursor: default;
   z-index: 3;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(234, 252, 254, 0.3);
+  background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
   backdrop-filter: blur(30px);
   position: fixed;
   width: 250px;
   border-radius: 5px;
   top: 41px;
-  left: 121px;
+  left: 140px;
   padding: 10px 20px;
 }
 .dropdown__file--hidden {
@@ -131,16 +135,17 @@
 }
 
 .dropdown__edit {
+  cursor: default;
   z-index: 3;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(234, 252, 254, 0.3);
+  background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
   backdrop-filter: blur(30px);
   position: fixed;
   width: 250px;
   border-radius: 5px;
   top: 41px;
-  left: 165px;
+  left: 196px;
   padding: 10px 20px;
 }
 .dropdown__edit--hidden {
@@ -162,16 +167,17 @@
 }
 
 .dropdown__view {
+  cursor: default;
   z-index: 3;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(234, 252, 254, 0.3);
+  background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
   backdrop-filter: blur(30px);
   position: fixed;
   width: 250px;
   border-radius: 5px;
   top: 41px;
-  left: 213px;
+  left: 253px;
   padding: 10px 20px;
 }
 .dropdown__view--hidden {
@@ -193,16 +199,17 @@
 }
 
 .dropdown__go {
+  cursor: default;
   z-index: 3;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(234, 252, 254, 0.3);
+  background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
   backdrop-filter: blur(30px);
   position: fixed;
   width: 250px;
   border-radius: 5px;
   top: 41px;
-  left: 268px;
+  left: 318px;
   padding: 10px 20px;
 }
 .dropdown__go--hidden {
@@ -224,16 +231,17 @@
 }
 
 .dropdown__window {
+  cursor: default;
   z-index: 3;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(234, 252, 254, 0.3);
+  background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
   backdrop-filter: blur(30px);
   position: fixed;
   width: 250px;
   border-radius: 5px;
   top: 41px;
-  left: 309px;
+  left: 369px;
   padding: 10px 20px;
 }
 .dropdown__window--hidden {
@@ -255,16 +263,17 @@
 }
 
 .dropdown__help {
+  cursor: default;
   z-index: 3;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  background-color: rgba(234, 252, 254, 0.3);
+  background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
   backdrop-filter: blur(30px);
   position: fixed;
   width: 250px;
   border-radius: 5px;
   top: 41px;
-  left: 387px;
+  left: 457px;
   padding: 10px 20px;
 }
 .dropdown__help--hidden {
