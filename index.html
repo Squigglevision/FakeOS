@@ -13,18 +13,20 @@
 	</head>
 	<body>
 		<header>
-			<nav class="menu">
-				<ul class="menu__left">
-					<li><i class="fa-brands fa-apple menu__icon"></i></li>
-					<li class="menu__item--bold">Finder</li>
-					<li>File</li>
-					<li>Edit</li>
-					<li>View</li>
-					<li>Go</li>
-					<li>Window</li>
-					<li>Help</li>
+			<nav class="menu" id="menu">
+				<ul id="leftMenu" class="menu__left">
+					<li id="menuApple">
+						<i class="fa-brands fa-apple menu__icon"></i>
+					</li>
+					<li id="menuAppTitle" class="menu__item--bold">Finder</li>
+					<li id="menuFile">File</li>
+					<li id="menuEdit">Edit</li>
+					<li id="menuView">View</li>
+					<li id="menuGo">Go</li>
+					<li id="menuWindow">Window</li>
+					<li id="menuHelp">Help</li>
 				</ul>
-				<ul class="menu__right">
+				<ul id="rightMenu" class="menu__right">
 					<li><i class="fa-solid fa-battery-full"></i></li>
 					<li><i class="fa-solid fa-wifi"></i></li>
 					<li><i class="fa-solid fa-magnifying-glass"></i></li>
@@ -38,6 +40,199 @@
 					<li id="dateAndTime">Thu 7 Sep 6:28 pm</li>
 				</ul>
 			</nav>
+			<div
+				id="appleDropdown"
+				class="dropdown__apple dropdown__apple--hidden"
+			>
+				<ul id="appleToHover">
+					<li>About This Mac</li>
+					<hr />
+					<li>System Settings</li>
+					<li>App Store</li>
+					<hr />
+					<li>Recent Items</li>
+					<hr />
+					<li>Force Quit Finder</li>
+					<li>Sleep</li>
+					<li>Restart</li>
+					<li>Shut Down</li>
+					<hr />
+					<li>Lock Screen</li>
+					<li>Log Out</li>
+				</ul>
+			</div>
+			<div id="appDropdown" class="dropdown__app dropdown__app--hidden">
+				<ul id="appTitleToHover">
+					<li>About Finder</li>
+					<hr />
+					<li>Settings</li>
+					<hr />
+					<li>Empty Bin</li>
+					<hr />
+					<li>Services</li>
+					<hr />
+					<li>Hide Finder</li>
+					<li>Hide Others</li>
+					<li class="dropdown__app--faded">Show all</li>
+				</ul>
+			</div>
+			<div
+				id="fileDropdown"
+				class="dropdown__file dropdown__file--hidden"
+			>
+				<ul id="fileToHover">
+					<li>New Finder Window</li>
+					<li>New Folder</li>
+					<li class="dropdown__file--faded">
+						New Folder with Selection
+					</li>
+					<li>New Smart Folder</li>
+					<li>New Tab</li>
+					<li>Open</li>
+					<li>Open With</li>
+					<li>Close Window</li>
+					<hr />
+					<li>Get Info</li>
+					<li class="dropdown__file--faded">Rename</li>
+					<li class="dropdown__file--faded">Compress</li>
+					<li class="dropdown__file--faded">Duplicate</li>
+					<li class="dropdown__file--faded">Make Alias</li>
+					<li>Quick Look "images"</li>
+					<li class="dropdown__file--faded">Print</li>
+					<hr />
+					<li class="dropdown__file--faded">Share</li>
+					<hr />
+					<li class="dropdown__file--faded">Show Original</li>
+					<li>Add to Dock</li>
+					<hr />
+					<li class="dropdown__file--faded">Move to Bin</li>
+					<li class="dropdown__file--faded">Eject</li>
+					<hr />
+					<li class="dropdown__file--faded">Tags...</li>
+					<hr />
+					<li>Find</li>
+				</ul>
+			</div>
+			<div
+				id="editDropdown"
+				class="dropdown__edit dropdown__edit--hidden"
+			>
+				<ul id="editToHover">
+					<li>New Finder Window</li>
+					<li>New Folder</li>
+					<li class="dropdown__edit--faded">
+						New Folder with Selection
+					</li>
+					<li>New Smart Folder</li>
+				</ul>
+			</div>
+			<div
+				id="viewDropdown"
+				class="dropdown__view dropdown__view--hidden"
+			>
+				<ul id="viewToHover">
+					<li>as Icons</li>
+					<li>as list</li>
+					<li>as Columns</li>
+					<li>as Gallery</li>
+					<hr />
+					<li>Use Groups</li>
+					<li>Sort By</li>
+					<li>Clean Up</li>
+					<li>Clean Up By</li>
+					<hr />
+					<li>Hide Sidebar</li>
+					<li>Show Preview</li>
+					<hr />
+
+					<li>Hide Toolbar</li>
+					<li>Show All Tabs</li>
+					<li>Show Tab Bar</li>
+					<li>Show Path Bar</li>
+					<li>Show Status Bar</li>
+					<hr />
+					<li>Customise Toolbar...</li>
+					<hr />
+					<li>Show View Options</li>
+					<li class="dropdown__view--faded">Show Preview Options</li>
+					<hr />
+					<li>Enter Full Screen</li>
+				</ul>
+			</div>
+			<div id="goDropdown" class="dropdown__go dropdown__go--hidden">
+				<ul id="goToHover">
+					<li class="dropdown__go--faded">Back</li>
+					<li>Forward</li>
+					<li>Select Startup Disk on Desktop</li>
+					<hr />
+					<li>Recent</li>
+					<li>Documents</li>
+					<li>Desktop</li>
+					<li>Downloads</li>
+					<li>Home</li>
+					<li>Computer</li>
+					<li>AirDrop</li>
+					<li>Network</li>
+					<li>iCloud Drive</li>
+					<li>Shared</li>
+					<li>Applications</li>
+					<li>Utilities</li>
+					<hr />
+					<li>Recent folders</li>
+					<hr />
+					<li>Go to Folder...</li>
+					<li>Connect to Server...</li>
+				</ul>
+			</div>
+			<div
+				id="windowDropdown"
+				class="dropdown__window dropdown__window--hidden"
+			>
+				<ul id="windowToHover">
+					<li>Minimise</li>
+					<li>Zoom</li>
+					<li>Tile Window to Left of Screen</li>
+					<li>Tile Window to Right of Screen</li>
+					<li class="dropdown__window--faded">
+						Replace Tiled Window
+					</li>
+					<hr />
+					<li class="dropdown__window--faded">
+						Remove Window from set
+					</li>
+					<hr />
+					<li>Move to Built-in Retina Display</li>
+					<li>Cycle Through Windows</li>
+					<li class="dropdown__window--faded">
+						Show Progress Window
+					</li>
+					<hr />
+					<li class="dropdown__window--faded">Show Previous Tab</li>
+					<li class="dropdown__window--faded">Show Next Tab</li>
+					<li class="dropdown__window--faded">
+						Move Tab to New Window
+					</li>
+					<li>Merge All Windows</li>
+					<hr />
+					<li>Bring All to Front</li>
+					<hr />
+					<li>Applications</li>
+					<li>User</li>
+					<li>Recent</li>
+				</ul>
+			</div>
+			<div
+				id="helpDropdown"
+				class="dropdown__help dropdown__help--hidden"
+			>
+				<ul id="helpToHover">
+					<li>Minimise</li>
+					<li>Zoom</li>
+					<li>Tile Window to Left of Screen</li>
+					<li>Tile Window to Right of Screen</li>
+					<li class="dropdown__help--faded">Replace Tiled Window</li>
+				</ul>
+			</div>
 		</header>
 		<main>
 			<div id="calculator" class="calculator">
