@@ -16,7 +16,7 @@
 		display: flex;
 		list-style-type: none;
 		& > li {
-			padding: 10px 10px;
+			padding: 11px 15px;
 		}
 	}
 
@@ -37,6 +37,10 @@
 }
 
 .dropdown {
+	&__hover {
+		background-color: #297beb;
+		color: white;
+	}
 	&__apple {
 		z-index: 3;
 		border: 1px solid rgb(0, 0, 0, 0.2);
@@ -51,6 +55,248 @@
 		padding: 10px 20px;
 		&--hidden {
 			display: none;
+		}
+
+		&--faded {
+			opacity: 0.3;
+		}
+		& > ul {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			& > hr {
+				border-color: rgb(0, 0, 0, 0.1);
+			}
+			& > li {
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+.dropdown {
+	&__app {
+		z-index: 3;
+		border: 1px solid rgb(0, 0, 0, 0.2);
+		background-color: rgba(234, 252, 254, 0.3);
+		box-shadow: 5px 5px 50px -15px black;
+		backdrop-filter: blur(30px);
+		position: fixed;
+		width: 250px;
+		border-radius: 5px;
+		top: 41px;
+		left: 52px;
+		padding: 10px 20px;
+		&--hidden {
+			display: none;
+		}
+
+		&--faded {
+			opacity: 0.3;
+		}
+		& > ul {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			& > hr {
+				border-color: rgb(0, 0, 0, 0.1);
+			}
+			& > li {
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+.dropdown {
+	&__file {
+		z-index: 3;
+		border: 1px solid rgb(0, 0, 0, 0.2);
+		background-color: rgba(234, 252, 254, 0.3);
+		box-shadow: 5px 5px 50px -15px black;
+		backdrop-filter: blur(30px);
+		position: fixed;
+		width: 250px;
+		border-radius: 5px;
+		top: 41px;
+		left: 121px;
+		padding: 10px 20px;
+		&--hidden {
+			display: none;
+		}
+
+		&--faded {
+			opacity: 0.3;
+		}
+		& > ul {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			& > hr {
+				border-color: rgb(0, 0, 0, 0.1);
+			}
+			& > li {
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+.dropdown {
+	&__edit {
+		z-index: 3;
+		border: 1px solid rgb(0, 0, 0, 0.2);
+		background-color: rgba(234, 252, 254, 0.3);
+		box-shadow: 5px 5px 50px -15px black;
+		backdrop-filter: blur(30px);
+		position: fixed;
+		width: 250px;
+		border-radius: 5px;
+		top: 41px;
+		left: 165px;
+		padding: 10px 20px;
+		&--hidden {
+			display: none;
+		}
+
+		&--faded {
+			opacity: 0.3;
+		}
+		& > ul {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			& > hr {
+				border-color: rgb(0, 0, 0, 0.1);
+			}
+			& > li {
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+.dropdown {
+	&__view {
+		z-index: 3;
+		border: 1px solid rgb(0, 0, 0, 0.2);
+		background-color: rgba(234, 252, 254, 0.3);
+		box-shadow: 5px 5px 50px -15px black;
+		backdrop-filter: blur(30px);
+		position: fixed;
+		width: 250px;
+		border-radius: 5px;
+		top: 41px;
+		left: 213px;
+		padding: 10px 20px;
+		&--hidden {
+			display: none;
+		}
+
+		&--faded {
+			opacity: 0.3;
+		}
+		& > ul {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			& > hr {
+				border-color: rgb(0, 0, 0, 0.1);
+			}
+			& > li {
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+.dropdown {
+	&__go {
+		z-index: 3;
+		border: 1px solid rgb(0, 0, 0, 0.2);
+		background-color: rgba(234, 252, 254, 0.3);
+		box-shadow: 5px 5px 50px -15px black;
+		backdrop-filter: blur(30px);
+		position: fixed;
+		width: 250px;
+		border-radius: 5px;
+		top: 41px;
+		left: 268px;
+		padding: 10px 20px;
+		&--hidden {
+			display: none;
+		}
+
+		&--faded {
+			opacity: 0.3;
+		}
+		& > ul {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			& > hr {
+				border-color: rgb(0, 0, 0, 0.1);
+			}
+			& > li {
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+.dropdown {
+	&__window {
+		z-index: 3;
+		border: 1px solid rgb(0, 0, 0, 0.2);
+		background-color: rgba(234, 252, 254, 0.3);
+		box-shadow: 5px 5px 50px -15px black;
+		backdrop-filter: blur(30px);
+		position: fixed;
+		width: 250px;
+		border-radius: 5px;
+		top: 41px;
+		left: 309px;
+		padding: 10px 20px;
+		&--hidden {
+			display: none;
+		}
+
+		&--faded {
+			opacity: 0.3;
+		}
+		& > ul {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			& > hr {
+				border-color: rgb(0, 0, 0, 0.1);
+			}
+			& > li {
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+.dropdown {
+	&__help {
+		z-index: 3;
+		border: 1px solid rgb(0, 0, 0, 0.2);
+		background-color: rgba(234, 252, 254, 0.3);
+		box-shadow: 5px 5px 50px -15px black;
+		backdrop-filter: blur(30px);
+		position: fixed;
+		width: 250px;
+		border-radius: 5px;
+		top: 41px;
+		left: 387px;
+		padding: 10px 20px;
+		&--hidden {
+			display: none;
+		}
+
+		&--faded {
+			opacity: 0.3;
 		}
 		& > ul {
 			display: flex;
