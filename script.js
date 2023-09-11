@@ -2,29 +2,10 @@ import { getFormattedDateAndTime } from "./assets/javascript/functions.js";
 import { calcZIndex } from "./assets/javascript/functions.js";
 import { newZIndex } from "./assets/javascript/functions.js";
 
-const finder = document.querySelector("#finder");
-const openFinder = document.querySelector("#finderDock");
-const closeFinder = document.querySelector("#finderClose");
-const catPicsIcon = document.querySelector("#catPicsIcon");
-const hdIcon = document.querySelector("#hdIcon");
-const coolStuffIcon = document.querySelector("#coolStuffIcon");
-const documentsIcon = document.querySelector("#documentsIcon");
-const finderHeaderText = document.querySelector("#finderHeaderText");
-const messages = document.querySelector("#messages");
-const messagesDock = document.querySelector("#messagesDock");
-const closeMessages = document.querySelector("#messagesClose");
-const openNotes = document.querySelector("#notesDock");
-const notes = document.querySelector("#notes");
-const closeNotes = document.querySelector("#notesClose");
-const openCalculator = document.querySelector("#calculatorDock");
-const calculator = document.querySelector("#calculator");
-const closeCalculator = document.querySelector("#calculatorClose");
-const openDownloads = document.querySelector("#downloadsDock");
-const openBin = document.querySelector("#binDock");
+// Menu functionality:
 
 const leftMenu = document.querySelector("#leftMenu");
 const menuToHover = leftMenu.querySelectorAll("li");
-const hovered = leftMenu.querySelectorAll("li.menu__hover");
 
 menuToHover.forEach((li) => {
 	li.addEventListener("mouseover", (event) => {
@@ -241,6 +222,8 @@ menuFile.addEventListener("mouseover", (event) => {
 	fileDropdown.classList.remove("dropdown__file--hidden");
 });
 
+// Clicks away from the menu items/dropdowns will close them:
+
 window.addEventListener("click", (event) => {
 	if (
 		!menuAppTitle.contains(event.target) &&
@@ -290,6 +273,8 @@ window.addEventListener("click", (event) => {
 		helpDropdown.classList.add("dropdown__help--hidden");
 	}
 });
+
+// Mousover on the menu, but not on menu items/dropdowns, will close the current dropdown. Otherwise, the current dropdown will stay open:
 
 const menu = document.querySelector("#menu");
 
@@ -356,6 +341,28 @@ window.addEventListener("mouseover", (event) => {
 
 const dateAndTime = document.querySelector("#dateAndTime");
 dateAndTime.innerHTML = getFormattedDateAndTime();
+
+// App functionality - showing and hiding modals:
+
+const finder = document.querySelector("#finder");
+const openFinder = document.querySelector("#finderDock");
+const closeFinder = document.querySelector("#finderClose");
+const catPicsIcon = document.querySelector("#catPicsIcon");
+const hdIcon = document.querySelector("#hdIcon");
+const coolStuffIcon = document.querySelector("#coolStuffIcon");
+const documentsIcon = document.querySelector("#documentsIcon");
+const finderHeaderText = document.querySelector("#finderHeaderText");
+const messages = document.querySelector("#messages");
+const messagesDock = document.querySelector("#messagesDock");
+const closeMessages = document.querySelector("#messagesClose");
+const openNotes = document.querySelector("#notesDock");
+const notes = document.querySelector("#notes");
+const closeNotes = document.querySelector("#notesClose");
+const openCalculator = document.querySelector("#calculatorDock");
+const calculator = document.querySelector("#calculator");
+const closeCalculator = document.querySelector("#calculatorClose");
+const openDownloads = document.querySelector("#downloadsDock");
+const openBin = document.querySelector("#binDock");
 
 closeFinder.addEventListener("click", (event) => {
 	finder.style.display = "none";
