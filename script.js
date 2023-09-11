@@ -1,3 +1,7 @@
+import { getFormattedDateAndTime } from "./assets/javascript/functions.js";
+import { calcZIndex } from "./assets/javascript/functions.js";
+import { newZIndex } from "./assets/javascript/functions.js";
+
 const finder = document.querySelector("#finder");
 const openFinder = document.querySelector("#finderDock");
 const closeFinder = document.querySelector("#finderClose");
@@ -5,7 +9,6 @@ const catPicsIcon = document.querySelector("#catPicsIcon");
 const hdIcon = document.querySelector("#hdIcon");
 const coolStuffIcon = document.querySelector("#coolStuffIcon");
 const documentsIcon = document.querySelector("#documentsIcon");
-const finderHeader = document.querySelector("#finderHeader");
 const finderHeaderText = document.querySelector("#finderHeaderText");
 const messages = document.querySelector("#messages");
 const messagesDock = document.querySelector("#messagesDock");
@@ -19,7 +22,6 @@ const closeCalculator = document.querySelector("#calculatorClose");
 const openDownloads = document.querySelector("#downloadsDock");
 const openBin = document.querySelector("#binDock");
 
-// ---> menu functions - to their own javascript file?
 const leftMenu = document.querySelector("#leftMenu");
 const menuToHover = leftMenu.querySelectorAll("li");
 const hovered = leftMenu.querySelectorAll("li.menu__hover");
@@ -160,7 +162,6 @@ helpHovered.forEach((li) => {
 		li.classList.remove("dropdown__hover");
 	});
 });
-const menuIconApple = document.querySelector("#menuAppleIcon");
 const menuApple = document.querySelector("#menuApple");
 const appleDropdown = document.querySelector("#appleDropdown");
 
@@ -353,34 +354,8 @@ window.addEventListener("mouseover", (event) => {
 	}
 });
 
-// <---
-
-// ---> Date and time -- to its own javascript file?
 const dateAndTime = document.querySelector("#dateAndTime");
-const date = new Date().toUTCString().slice(0, 11).replace(",", "");
-
-const australiaDateAndTime = new Date().toLocaleString("en-US", {
-	timeZone: "Australia/Sydney",
-});
-
-const australiaTime = australiaDateAndTime
-	.slice(11, 16)
-	.replace(/(?=.$)([:])/, "");
-const australiaAmOrPm = australiaDateAndTime.slice(19);
-
-const currentDateAndTime = `${date} ${australiaTime} ${australiaAmOrPm}`;
-
-dateAndTime.innerHTML = currentDateAndTime;
-
-// <---
-
-// ---> ZIndex calc function
-let newZIndex = 2;
-const calcZIndex = () => {
-	return newZIndex++;
-};
-
-// <--- Move to its own JavaScript file?
+dateAndTime.innerHTML = getFormattedDateAndTime();
 
 closeFinder.addEventListener("click", (event) => {
 	finder.style.display = "none";
