@@ -24,8 +24,6 @@ const leftMenu = document.querySelector("#leftMenu");
 const menuToHover = leftMenu.querySelectorAll("li");
 const hovered = leftMenu.querySelectorAll("li.menu__hover");
 
-console.log(menuToHover);
-
 menuToHover.forEach((li) => {
 	li.addEventListener("mouseover", (event) => {
 		li.classList.add("menu__hover");
@@ -359,14 +357,15 @@ window.addEventListener("mouseover", (event) => {
 
 // ---> Date and time -- to its own javascript file?
 const dateAndTime = document.querySelector("#dateAndTime");
-const date = new Date().toUTCString().slice(0, 11);
-console.log(date);
+const date = new Date().toUTCString().slice(0, 11).replace(",", "");
 
 const australiaDateAndTime = new Date().toLocaleString("en-US", {
 	timeZone: "Australia/Sydney",
 });
 
-const australiaTime = australiaDateAndTime.slice(11, 16);
+const australiaTime = australiaDateAndTime
+	.slice(11, 16)
+	.replace(/(?=.$)([:])/, "");
 const australiaAmOrPm = australiaDateAndTime.slice(19);
 
 const currentDateAndTime = `${date} ${australiaTime} ${australiaAmOrPm}`;
@@ -375,6 +374,14 @@ dateAndTime.innerHTML = currentDateAndTime;
 
 // <---
 
+// ---> ZIndex calc function
+let newZIndex = 2;
+const calcZIndex = () => {
+	return newZIndex++;
+};
+
+// <--- Move to its own JavaScript file?
+
 closeFinder.addEventListener("click", (event) => {
 	finder.style.display = "none";
 	finder.style.zIndex = "0";
@@ -382,10 +389,22 @@ closeFinder.addEventListener("click", (event) => {
 
 openFinder.addEventListener("click", (event) => {
 	finder.style.display = "flex";
-	messages.style.zIndex = 1;
-	notes.style.zIndex = 1;
-	calculator.style.zIndex = 1;
-	finder.style.zIndex = 2;
+	calcZIndex();
+	finder.style.zIndex = newZIndex;
+	if (finderHeaderText.innerHTML == "Finder") {
+		cats.forEach((div) => {
+			div.classList.add("cats--hidden");
+		});
+		cool.forEach((div) => {
+			div.classList.add("cool--hidden");
+		});
+		documents.forEach((div) => {
+			div.classList.add("documents--hidden");
+		});
+		bin.forEach((div) => {
+			div.classList.add("bin--hidden");
+		});
+	}
 });
 
 closeCalculator.addEventListener("click", (event) => {
@@ -395,18 +414,14 @@ closeCalculator.addEventListener("click", (event) => {
 
 openCalculator.addEventListener("click", (event) => {
 	calculator.classList.remove("calculator--hidden");
-	messages.style.zIndex = 1;
-	notes.style.zIndex = 1;
-	finder.style.zIndex = 1;
-	calculator.style.zIndex = 2;
+	calcZIndex();
+	calculator.style.zIndex = newZIndex;
 });
 
 openNotes.addEventListener("click", (event) => {
 	notes.classList.remove("notes--hidden");
-	messages.style.zIndex = 1;
-	finder.style.zIndex = 1;
-	notes.style.zIndex = 2;
-	calculator.style.zIndex = 1;
+	calcZIndex();
+	notes.style.zIndex = newZIndex;
 });
 closeNotes.addEventListener("click", (event) => {
 	notes.classList.add("notes--hidden");
@@ -420,10 +435,8 @@ closeMessages.addEventListener("click", (event) => {
 
 messagesDock.addEventListener("click", (event) => {
 	messages.classList.remove("messages--hidden");
-	finder.style.zIndex = 1;
-	notes.style.zIndex = 1;
-	calculator.style.zIndex = 1;
-	messages.style.zIndex = 2;
+	calcZIndex();
+	messages.style.zIndex = newZIndex;
 });
 
 const finderContent = document.querySelector("#finderContent");
@@ -447,13 +460,15 @@ catPicsIcon.addEventListener("click", (event) => {
 	bin.forEach((div) => {
 		div.classList.add("bin--hidden");
 	});
-	finder.style.zIndex = 2;
+	calcZIndex();
+	finder.style.zIndex = newZIndex;
 });
 
 hdIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Macintosh HD";
-	finder.style.zIndex = 2;
+	calcZIndex();
+	finder.style.zIndex = newZIndex;
 	cats.forEach((div) => {
 		div.classList.add("cats--hidden");
 	});
@@ -471,7 +486,8 @@ hdIcon.addEventListener("click", (event) => {
 coolStuffIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Cool stuff";
-	finder.style.zIndex = 2;
+	calcZIndex();
+	finder.style.zIndex = newZIndex;
 	cats.forEach((div) => {
 		div.classList.add("cats--hidden");
 	});
@@ -489,7 +505,8 @@ coolStuffIcon.addEventListener("click", (event) => {
 documentsIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Documents";
-	finder.style.zIndex = 2;
+	calcZIndex();
+	finder.style.zIndex = newZIndex;
 	cats.forEach((div) => {
 		div.classList.add("cats--hidden");
 	});
@@ -507,7 +524,8 @@ documentsIcon.addEventListener("click", (event) => {
 openDownloads.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Downloads";
-	finder.style.zIndex = 2;
+	calcZIndex();
+	finder.style.zIndex = newZIndex;
 	cats.forEach((div) => {
 		div.classList.add("cats--hidden");
 	});
@@ -525,7 +543,8 @@ openDownloads.addEventListener("click", (event) => {
 openBin.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Bin";
-	finder.style.zIndex = 2;
+	calcZIndex();
+	finder.style.zIndex = newZIndex;
 	cats.forEach((div) => {
 		div.classList.add("cats--hidden");
 	});

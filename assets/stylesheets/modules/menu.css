@@ -40,7 +40,7 @@
 }
 .dropdown__apple {
   cursor: default;
-  z-index: 3;
+  z-index: 1000;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
@@ -72,7 +72,7 @@
 
 .dropdown__app {
   cursor: default;
-  z-index: 3;
+  z-index: 1000;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
@@ -104,7 +104,7 @@
 
 .dropdown__file {
   cursor: default;
-  z-index: 3;
+  z-index: 1000;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
@@ -136,7 +136,7 @@
 
 .dropdown__edit {
   cursor: default;
-  z-index: 3;
+  z-index: 1000;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
@@ -168,7 +168,7 @@
 
 .dropdown__view {
   cursor: default;
-  z-index: 3;
+  z-index: 1000;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
@@ -200,7 +200,7 @@
 
 .dropdown__go {
   cursor: default;
-  z-index: 3;
+  z-index: 1000;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
@@ -232,7 +232,7 @@
 
 .dropdown__window {
   cursor: default;
-  z-index: 3;
+  z-index: 1000;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
@@ -264,7 +264,7 @@
 
 .dropdown__help {
   cursor: default;
-  z-index: 3;
+  z-index: 1000;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(234, 252, 254, 0.5);
   box-shadow: 5px 5px 50px -15px black;
