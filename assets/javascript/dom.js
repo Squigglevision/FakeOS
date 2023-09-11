@@ -167,7 +167,7 @@ const menuApple = document.querySelector("#menuApple");
 const appleDropdown = document.querySelector("#appleDropdown");
 
 menuApple.addEventListener("click", (event) => {
-	appleDropdown.classList.remove("dropdown__apple--hidden");
+	appleDropdown.classList.toggle("dropdown__apple--hidden");
 });
 
 menuApple.addEventListener("mouseover", (event) => {
@@ -177,7 +177,7 @@ menuApple.addEventListener("mouseover", (event) => {
 const menuAppTitle = document.querySelector("#menuAppTitle");
 const appDropdown = document.querySelector("#appDropdown");
 menuAppTitle.addEventListener("click", (event) => {
-	appDropdown.classList.remove("dropdown__app--hidden");
+	appDropdown.classList.toggle("dropdown__app--hidden");
 });
 menuAppTitle.addEventListener("mouseover", (event) => {
 	appDropdown.classList.remove("dropdown__app--hidden");
@@ -186,7 +186,7 @@ menuAppTitle.addEventListener("mouseover", (event) => {
 const menuEdit = document.querySelector("#menuEdit");
 const menuDropdown = document.querySelector("#menuDropdown");
 menuEdit.addEventListener("click", (event) => {
-	editDropdown.classList.remove("dropdown__edit--hidden");
+	editDropdown.classList.toggle("dropdown__edit--hidden");
 });
 
 menuEdit.addEventListener("mouseover", (event) => {
@@ -196,7 +196,7 @@ menuEdit.addEventListener("mouseover", (event) => {
 const menuView = document.querySelector("#menuView");
 const viewDropdown = document.querySelector("#viewDropdown");
 menuView.addEventListener("click", (event) => {
-	viewDropdown.classList.remove("dropdown__view--hidden");
+	viewDropdown.classList.toggle("dropdown__view--hidden");
 });
 menuView.addEventListener("mouseover", (event) => {
 	viewDropdown.classList.remove("dropdown__view--hidden");
@@ -205,7 +205,7 @@ menuView.addEventListener("mouseover", (event) => {
 const menuGo = document.querySelector("#menuGo");
 const goDropdown = document.querySelector("#goDropdown");
 menuGo.addEventListener("click", (event) => {
-	goDropdown.classList.remove("dropdown__go--hidden");
+	goDropdown.classList.toggle("dropdown__go--hidden");
 });
 
 menuGo.addEventListener("mouseover", (event) => {
@@ -215,7 +215,7 @@ menuGo.addEventListener("mouseover", (event) => {
 const menuWindow = document.querySelector("#menuWindow");
 const windowDropdown = document.querySelector("#windowDropdown");
 menuWindow.addEventListener("click", (event) => {
-	windowDropdown.classList.remove("dropdown__window--hidden");
+	windowDropdown.classList.toggle("dropdown__window--hidden");
 });
 
 menuWindow.addEventListener("mouseover", (event) => {
@@ -225,7 +225,7 @@ menuWindow.addEventListener("mouseover", (event) => {
 const menuHelp = document.querySelector("#menuHelp");
 const helpDropdown = document.querySelector("#helpDropdown");
 menuHelp.addEventListener("click", (event) => {
-	helpDropdown.classList.remove("dropdown__help--hidden");
+	helpDropdown.classList.toggle("dropdown__help--hidden");
 });
 
 menuHelp.addEventListener("mouseover", (event) => {
@@ -235,7 +235,7 @@ menuHelp.addEventListener("mouseover", (event) => {
 const menuFile = document.querySelector("#menuFile");
 const fileDropdown = document.querySelector("#fileDropdown");
 menuFile.addEventListener("click", (event) => {
-	fileDropdown.classList.remove("dropdown__file--hidden");
+	fileDropdown.classList.toggle("dropdown__file--hidden");
 });
 
 menuFile.addEventListener("mouseover", (event) => {
@@ -347,12 +347,9 @@ window.addEventListener("mouseover", (event) => {
 		helpDropdown.classList.add("dropdown__help--hidden");
 	}
 	if (
-		(!menuApple.contains(event.target) &&
-			!appleDropdown.contains(event.target) &&
-			menu.contains(event.target)) ||
-		(!menuIconApple.contains(event.target) &&
-			!appleDropdown.contains(event.target) &&
-			menu.contains(event.target))
+		!menuApple.contains(event.target) &&
+		!appleDropdown.contains(event.target) &&
+		menu.contains(event.target)
 	) {
 		appleDropdown.classList.add("dropdown__apple--hidden");
 	}
@@ -392,12 +389,12 @@ openFinder.addEventListener("click", (event) => {
 });
 
 closeCalculator.addEventListener("click", (event) => {
-	calculator.style.display = "none";
+	calculator.classList.add("calculator--hidden");
 	calculator.style.zIndex = "0";
 });
 
 openCalculator.addEventListener("click", (event) => {
-	calculator.style.display = "flex";
+	calculator.classList.remove("calculator--hidden");
 	messages.style.zIndex = 1;
 	notes.style.zIndex = 1;
 	finder.style.zIndex = 1;
@@ -405,33 +402,51 @@ openCalculator.addEventListener("click", (event) => {
 });
 
 openNotes.addEventListener("click", (event) => {
-	notes.style.display = "flex";
+	notes.classList.remove("notes--hidden");
 	messages.style.zIndex = 1;
 	finder.style.zIndex = 1;
 	notes.style.zIndex = 2;
 	calculator.style.zIndex = 1;
 });
 closeNotes.addEventListener("click", (event) => {
-	notes.style.display = "none";
+	notes.classList.add("notes--hidden");
 	notes.style.zIndex = "0";
 });
 
 closeMessages.addEventListener("click", (event) => {
-	messages.style.display = "none";
+	messages.classList.add("messages--hidden");
 	messages.style.zIndex = "0";
 });
 
 messagesDock.addEventListener("click", (event) => {
-	messages.style.display = "flex";
+	messages.classList.remove("messages--hidden");
 	finder.style.zIndex = 1;
 	notes.style.zIndex = 1;
 	calculator.style.zIndex = 1;
 	messages.style.zIndex = 2;
 });
 
+const finderContent = document.querySelector("#finderContent");
+const cats = finderContent.querySelectorAll("div.cats");
+const cool = finderContent.querySelectorAll("div.cool");
+const documents = finderContent.querySelectorAll("div.documents");
+const bin = finderContent.querySelectorAll("div.bin");
+
 catPicsIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Cat pics";
+	cats.forEach((div) => {
+		div.classList.remove("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 	finder.style.zIndex = 2;
 });
 
@@ -439,28 +454,88 @@ hdIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Macintosh HD";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 });
 
 coolStuffIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Cool stuff";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.remove("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 });
 
 documentsIcon.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Documents";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.remove("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 });
 
 openDownloads.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Downloads";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.add("bin--hidden");
+	});
 });
 
 openBin.addEventListener("click", (event) => {
 	finder.style.display = "flex";
 	finderHeaderText.innerHTML = "Bin";
 	finder.style.zIndex = 2;
+	cats.forEach((div) => {
+		div.classList.add("cats--hidden");
+	});
+	cool.forEach((div) => {
+		div.classList.add("cool--hidden");
+	});
+	documents.forEach((div) => {
+		div.classList.add("documents--hidden");
+	});
+	bin.forEach((div) => {
+		div.classList.remove("bin--hidden");
+	});
 });

@@ -2,6 +2,7 @@
   position: fixed;
   height: 50%;
   width: 40%;
+  top: 200px;
   margin-left: 0;
   margin-top: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -69,7 +70,7 @@
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.2), 10px 10px 30px 0px rgba(0, 0, 0, 0.2);
 }
 .finder__header {
-  height: 100px;
+  height: 15%;
   background-color: #fcf6f3;
   display: flex;
   align-items: center;
@@ -85,20 +86,69 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 50px;
+  gap: 0;
   padding: 0;
-  height: 70%;
+  height: 85%;
   overflow-y: auto;
-  margin-top: 20px;
-  margin-left: 20px;
+}
+.finder__content__bin1 {
+  width: 254px;
+  height: 158px;
+  background-image: url(../images/bin-chicken.png);
+}
+.finder__content__cool1 {
+  width: 500px;
+  height: 300px;
+  background-image: url(../images/spongebob-squarepants-gif.gif);
+}
+.finder__content__cat1 {
+  width: 162px;
+  height: 122px;
+  border: 1px solid black;
+  background-image: url("../images/cat-pic.png");
+}
+.finder__content__cat2 {
+  width: 162px;
+  height: 122px;
+  border: 1px solid black;
+  background-image: url("../images/cat-pic2.png");
+}
+.finder__content__cat3 {
+  width: 162px;
+  height: 122px;
+  border: 1px solid black;
+  background-image: url("../images/cat-pic3.png");
+}
+.finder__content__cat4 {
+  width: 162px;
+  height: 122px;
+  border: 1px solid black;
+  background-image: url("../images/cat-pic4.png");
 }
 .finder__content__wrapper {
+  margin-top: 20px;
+  margin-left: 20px;
   border: 2px solid white;
   box-shadow: -5px 10px 40px -30px black;
 }
-.finder__content__wrapper > img {
-  width: 100px;
-  border: 1px solid black;
+.finder__content__documents > ul > li {
+  list-style-type: none;
+}
+
+.cats--hidden {
+  display: none;
+}
+
+.cool--hidden {
+  display: none;
+}
+
+.documents--hidden {
+  display: none;
+}
+
+.bin--hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=finder.css.map */
