@@ -1,0 +1,115 @@
+.messages {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  height: 50%;
+  width: 40%;
+  border-radius: 10px;
+  display: flex;
+  color: black;
+  text-shadow: none;
+}
+.messages--hidden {
+  display: none;
+}
+.messages__left {
+  width: 45%;
+  background-color: #e6e0dd;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1), -1px 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.messages__right {
+  width: 55%;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.1), 10px 10px 30px 0px rgba(0, 0, 0, 0.1);
+}
+.messages__window__buttons {
+  width: 100px;
+  height: 20px;
+  display: flex;
+  padding: 30px 30px 10px 30px;
+  gap: 12px;
+}
+.messages__close {
+  width: 12px;
+  height: 12px;
+  background-color: #fb5851;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+}
+.messages__minimise {
+  width: 12px;
+  height: 12px;
+  background-color: #fab23f;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+}
+.messages__fullscreen {
+  width: 12px;
+  height: 12px;
+  background-color: #32c048;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+}
+.messages__search {
+  padding: 7px;
+  background-color: #d5d1d1;
+  border: none;
+  border-radius: 5px;
+}
+.messages__new {
+  color: white;
+  font-weight: bold;
+  font-size: small;
+  padding-left: 20px;
+  background-color: #297beb;
+  border-radius: 5px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+.messages__shortcuts {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.messages__header {
+  height: 100px;
+  background-color: #fcf6f3;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 10px;
+}
+.messages__header > p {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.messages__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 0;
+  height: 70%;
+  overflow-y: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.messages__content__wrapper {
+  border: 2px solid white;
+  box-shadow: -5px 10px 40px -30px black;
+}
+.messages__content__wrapper > img {
+  width: 100px;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=messages.css.map */

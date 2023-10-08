@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/stylesheets/styles.css" />
+		<script
+			src="https://kit.fontawesome.com/d1ea9d8bdb.js"
+			crossorigin="anonymous"
+		></script>
+		<script type="module" src="./script.js" defer></script>
+		<title>FaMac OS</title>
+	</head>
+	<body>
+		<header>
+			<nav class="menu" id="menu">
+				<ul id="leftMenu" class="menu__left">
+					<li id="menuApple">
+						<i
+							id="menuIconApple"
+							class="fa-brands fa-apple menu__icon"
+						></i>
+					</li>
+					<li id="menuAppTitle" class="menu__item--bold">Finder</li>
+					<li id="menuFile">File</li>
+					<li id="menuEdit">Edit</li>
+					<li id="menuView">View</li>
+					<li id="menuGo">Go</li>
+					<li id="menuWindow">Window</li>
+					<li id="menuHelp">Help</li>
+				</ul>
+				<ul id="rightMenu" class="menu__right">
+					<li><i class="fa-solid fa-battery-full"></i></li>
+					<li><i class="fa-solid fa-wifi"></i></li>
+					<li><i class="fa-solid fa-magnifying-glass"></i></li>
+					<li>
+						<img
+							class="test-icon"
+							src="./assets/images/apple-switch-icon.svg"
+							alt=""
+						/>
+					</li>
+					<li id="dateAndTime">Thu 7 Sep 6:28 pm</li>
+				</ul>
+			</nav>
+			<div
+				id="appleDropdown"
+				class="dropdown__apple dropdown__apple--hidden"
+			>
+				<ul id="appleToHover">
+					<li>About This Mac</li>
+					<hr />
+					<li>System Settings</li>
+					<li>App Store</li>
+					<hr />
+					<li>Recent Items</li>
+					<hr />
+					<li>Force Quit Finder</li>
+					<li>Sleep</li>
+					<li>Restart</li>
+					<li>Shut Down</li>
+					<hr />
+					<li>Lock Screen</li>
+					<li>Log Out</li>
+				</ul>
+			</div>
+			<div id="appDropdown" class="dropdown__app dropdown__app--hidden">
+				<ul id="appTitleToHover">
+					<li>About Finder</li>
+					<hr />
+					<li>Settings</li>
+					<hr />
+					<li>Empty Bin</li>
+					<hr />
+					<li>Services</li>
+					<hr />
+					<li>Hide Finder</li>
+					<li>Hide Others</li>
+					<li class="dropdown__app--faded">Show all</li>
+				</ul>
+			</div>
+			<div
+				id="fileDropdown"
+				class="dropdown__file dropdown__file--hidden"
+			>
+				<ul id="fileToHover">
+					<li>New Finder Window</li>
+					<li>New Folder</li>
+					<li class="dropdown__file--faded">
+						New Folder with Selection
+					</li>
+					<li>New Smart Folder</li>
+					<li>New Tab</li>
+					<li>Open</li>
+					<li>Open With</li>
+					<li>Close Window</li>
+					<hr />
+					<li>Get Info</li>
+					<li class="dropdown__file--faded">Rename</li>
+					<li class="dropdown__file--faded">Compress</li>
+					<li class="dropdown__file--faded">Duplicate</li>
+					<li class="dropdown__file--faded">Make Alias</li>
+					<li>Quick Look "images"</li>
+					<li class="dropdown__file--faded">Print</li>
+					<hr />
+					<li class="dropdown__file--faded">Share</li>
+					<hr />
+					<li class="dropdown__file--faded">Show Original</li>
+					<li>Add to Dock</li>
+					<hr />
+					<li class="dropdown__file--faded">Move to Bin</li>
+					<li class="dropdown__file--faded">Eject</li>
+					<hr />
+					<li class="dropdown__file--faded">Tags...</li>
+					<hr />
+					<li>Find</li>
+				</ul>
+			</div>
+			<div
+				id="editDropdown"
+				class="dropdown__edit dropdown__edit--hidden"
+			>
+				<ul id="editToHover">
+					<li>New Finder Window</li>
+					<li>New Folder</li>
+					<li class="dropdown__edit--faded">
+						New Folder with Selection
+					</li>
+					<li>New Smart Folder</li>
+				</ul>
+			</div>
+			<div
+				id="viewDropdown"
+				class="dropdown__view dropdown__view--hidden"
+			>
+				<ul id="viewToHover">
+					<li>as Icons</li>
+					<li>as list</li>
+					<li>as Columns</li>
+					<li>as Gallery</li>
+					<hr />
+					<li>Use Groups</li>
+					<li>Sort By</li>
+					<li>Clean Up</li>
+					<li>Clean Up By</li>
+					<hr />
+					<li>Hide Sidebar</li>
+					<li>Show Preview</li>
+					<hr />
+
+					<li>Hide Toolbar</li>
+					<li>Show All Tabs</li>
+					<li>Show Tab Bar</li>
+					<li>Show Path Bar</li>
+					<li>Show Status Bar</li>
+					<hr />
+					<li>Customise Toolbar...</li>
+					<hr />
+					<li>Show View Options</li>
+					<li class="dropdown__view--faded">Show Preview Options</li>
+					<hr />
+					<li>Enter Full Screen</li>
+				</ul>
+			</div>
+			<div id="goDropdown" class="dropdown__go dropdown__go--hidden">
+				<ul id="goToHover">
+					<li class="dropdown__go--faded">Back</li>
+					<li>Forward</li>
+					<li>Select Startup Disk on Desktop</li>
+					<hr />
+					<li>Recent</li>
+					<li>Documents</li>
+					<li>Desktop</li>
+					<li>Downloads</li>
+					<li>Home</li>
+					<li>Computer</li>
+					<li>AirDrop</li>
+					<li>Network</li>
+					<li>iCloud Drive</li>
+					<li>Shared</li>
+					<li>Applications</li>
+					<li>Utilities</li>
+					<hr />
+					<li>Recent folders</li>
+					<hr />
+					<li>Go to Folder...</li>
+					<li>Connect to Server...</li>
+				</ul>
+			</div>
+			<div
+				id="windowDropdown"
+				class="dropdown__window dropdown__window--hidden"
+			>
+				<ul id="windowToHover">
+					<li>Minimise</li>
+					<li>Zoom</li>
+					<li>Tile Window to Left of Screen</li>
+					<li>Tile Window to Right of Screen</li>
+					<li class="dropdown__window--faded">
+						Replace Tiled Window
+					</li>
+					<hr />
+					<li class="dropdown__window--faded">
+						Remove Window from set
+					</li>
+					<hr />
+					<li>Move to Built-in Retina Display</li>
+					<li>Cycle Through Windows</li>
+					<li class="dropdown__window--faded">
+						Show Progress Window
+					</li>
+					<hr />
+					<li class="dropdown__window--faded">Show Previous Tab</li>
+					<li class="dropdown__window--faded">Show Next Tab</li>
+					<li class="dropdown__window--faded">
+						Move Tab to New Window
+					</li>
+					<li>Merge All Windows</li>
+					<hr />
+					<li>Bring All to Front</li>
+					<hr />
+					<li>Applications</li>
+					<li>User</li>
+					<li>Recent</li>
+				</ul>
+			</div>
+			<div
+				id="helpDropdown"
+				class="dropdown__help dropdown__help--hidden"
+			>
+				<ul id="helpToHover">
+					<li>Minimise</li>
+					<li>Zoom</li>
+					<li>Tile Window to Left of Screen</li>
+					<li>Tile Window to Right of Screen</li>
+					<li class="dropdown__help--faded">Replace Tiled Window</li>
+				</ul>
+			</div>
+		</header>
+		<main>
+			<div id="calculator" class="calculator calculator--hidden">
+				<div class="calculator__wrapper">
+					<div class="calculator__window__buttons">
+						<div
+							id="calculatorClose"
+							class="calculator__close"
+						></div>
+						<div class="calculator__minimise"></div>
+						<div class="calculator__fullscreen"></div>
+					</div>
+					<div class="calculator__content">
+						<div class="calculator__screen">
+							<div>0</div>
+						</div>
+						<div class="calculator__buttons">
+							<div class="calculator__buttons__left">
+								<div class="calculator__buttons__left--top">
+									<div class="calculator__btn">AC</div>
+									<div class="calculator__btn">+/-</div>
+									<div class="calculator__btn">%</div>
+								</div>
+								<div class="calculator__buttons__left--bottom">
+									<div class="calculator__btn">9</div>
+									<div class="calculator__btn">8</div>
+									<div class="calculator__btn">7</div>
+									<div class="calculator__btn">6</div>
+									<div class="calculator__btn">5</div>
+									<div class="calculator__btn">4</div>
+									<div class="calculator__btn">3</div>
+									<div class="calculator__btn">2</div>
+									<div class="calculator__btn">1</div>
+									<div class="calculator__btn">0</div>
+									<div class="calculator__btn">.</div>
+								</div>
+							</div>
+							<div class="calculator__buttons__right">
+								<div class="calculator__btn">/</div>
+								<div class="calculator__btn">X</div>
+								<div class="calculator__btn">-</div>
+								<div class="calculator__btn">+</div>
+								<div class="calculator__btn">=</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="notes" class="notes notes--hidden">
+				<div class="notes__left">
+					<div class="notes__window__buttons">
+						<div id="notesClose" class="notes__close"></div>
+						<div class="notes__minimise"></div>
+						<div class="notes__fullscreen"></div>
+					</div>
+					<div class="notes__shortcuts">
+						<ul>
+							<li class="notes__category">iCloud</li>
+							<li class="notes__path notes__path--gold">Notes</li>
+							<li class="notes__path">Recently Deleted</li>
+						</ul>
+					</div>
+				</div>
+				<div class="notes__right">
+					<div id="notesHeader" class="notes__header">
+						<p id="notesHeaderText">Notes</p>
+					</div>
+					<div class="notes__content">
+						<div class="notes__content__left"><p>No notes</p></div>
+						<div class="notes__content__right"></div>
+					</div>
+				</div>
+			</div>
+			<div id="messages" class="messages messages--hidden">
+				<div class="messages__left">
+					<div class="messages__window__buttons">
+						<div id="messagesClose" class="messages__close"></div>
+						<div class="messages__minimise"></div>
+						<div class="messages__fullscreen"></div>
+					</div>
+					<div class="messages__shortcuts">
+						<input
+							type="text"
+							id="searchMessages"
+							class="messages__search"
+							placeholder="Search"
+						/>
+						<div class="messages__new">New Message</div>
+					</div>
+				</div>
+				<div class="messages__right">
+					<div id="messagesHeader" class="messages__header">
+						<p id="messagesHeaderText">To:</p>
+					</div>
+					<div class="messages__content"></div>
+				</div>
+			</div>
+			<div class="finder" id="finder">
+				<div class="finder__left">
+					<div class="finder__window__buttons">
+						<div id="finderClose" class="finder__close"></div>
+						<div class="finder__minimise"></div>
+						<div class="finder__fullscreen"></div>
+					</div>
+					<div class="finder__shortcuts">
+						<ul>
+							<li class="finder__category">Favourites</li>
+							<li class="finder__path">Recent</li>
+							<li class="finder__path">Applications</li>
+							<li class="finder__path">Desktop</li>
+							<li class="finder__path">Cat pics</li>
+							<li class="finder__path">Documents</li>
+							<li class="finder__path">Cool stuff</li>
+						</ul>
+					</div>
+				</div>
+				<div class="finder__right">
+					<div id="finderHeader" class="finder__header">
+						<p id="finderHeaderText">Finder</p>
+					</div>
+					<div id="finderContent" class="finder__content">
+						<div class="finder__content__wrapper">
+							<div class="finder__content__bin1 bin"></div>
+							<div class="finder__content__cool1 cool"></div>
+							<div class="finder__content__cat1 cats"></div>
+							<div class="finder__content__documents documents">
+								<ul>
+									<li>some-text.docx</li>
+									<li>notes.docx</li>
+								</ul>
+							</div>
+						</div>
+						<div class="finder__content__wrapper">
+							<div class="finder__content__cat2 cats"></div>
+						</div>
+						<div class="finder__content__wrapper">
+							<div class="finder__content__cat3 cats"></div>
+						</div>
+						<div class="finder__content__wrapper">
+							<div class="finder__content__cat4 cats"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="desktop">
+				<div class="desktop__icon__wrapper">
+					<div id="hdIcon" class="desktop__icon">
+						<img
+							class="desktop__icon__hd"
+							src="./assets/images/mac-hd.png"
+							alt=""
+						/>
+						<p>Macintosh HD</p>
+					</div>
+					<div id="coolStuffIcon" class="desktop__icon">
+						<img
+							class="desktop__icon__folder"
+							src="./assets/images/folder-icon-macos.webp"
+							alt=""
+						/>
+						<p>Cool stuff</p>
+					</div>
+					<div id="documentsIcon" class="desktop__icon">
+						<img
+							class="desktop__icon__folder"
+							src="./assets/images/folder-icon-macos.webp"
+							alt=""
+						/>
+						<p>Documents</p>
+					</div>
+					<div id="catPicsIcon" class="desktop__icon">
+						<img
+							class="desktop__icon__folder"
+							src="./assets/images/folder-icon-macos.webp"
+							alt=""
+						/>
+						<p>Cat pics</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<section class="dock">
+				<img
+					id="finderDock"
+					class="dock__icon"
+					src="./assets/images/FinderIcon.png"
+					alt=""
+				/>
+				<img
+					id="messagesDock"
+					class="dock__icon"
+					src="./assets/images/messages-mac.png"
+					alt=""
+				/>
+				<img
+					id="notesDock"
+					class="dock__icon"
+					src="./assets/images/notes-mac.png"
+					alt=""
+				/>
+				<img
+					id="calculatorDock"
+					class="dock__icon"
+					src="./assets/images/calculator.png"
+					alt=""
+				/>
+				<div class="dock__divider"></div>
+				<img
+					id="downloadsDock"
+					class="dock__icon dock__icon--right"
+					src="./assets/images/downloadsFolder.png"
+					alt=""
+				/>
+				<img
+					id="binDock"
+					class="dock__icon"
+					src="./assets/images/mac-bin.png"
+					alt=""
+				/>
+			</section>
+		</footer>
+	</body>
+</html>
