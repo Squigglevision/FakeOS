@@ -2,6 +2,7 @@
 ## A "fake" version of Mac OS Ventura made with HTML, SCSS and JavaScript
 
 Click [this link](https://squigglevision.github.io/FakeOS/) to play around with a live version of the site.
+Note: this application was designed for widescreen displays and is best viewed on a desktop or laptop
 
 ### What the "real" Mac OS looks like:
 
